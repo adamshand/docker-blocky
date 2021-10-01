@@ -1,0 +1,26 @@
+version: "2.1"
+services:
+  blocky:
+    image: spx01/blocky
+    container_name: blocky
+    restart: unless-stopped
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      # - "4000:4000/tcp" # Prometheus stats (if enabled).
+    environment:
+      - TZ=Pacific/Auckland
+    volumes:
+      # config file
+      - ./conf/config.yml:/app/config.yml
+      # write query logs in this volume
+      #- queryLogs:/logs
+      # put your custom white and blacklists in these directories
+      #- ./conf/blacklists:/app/blacklists/
+      #- ./conf/whitelists:/app/whitelists/
+    networks:
+      - caddy
+
+networks:
+  caddy:
+    external: true
