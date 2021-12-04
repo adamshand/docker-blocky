@@ -11,22 +11,28 @@ customDNS:
   mapping:
     # *.haume.nz resolves to 172.16.1.50
     gw.haume.nz: 172.16.1.1
+    kauri.haume.nz: 172.16.1.50
     books.haume.nz: 172.16.1.50
+    diatum.haume.nz: 172.16.1.50
+    git.haume.nz: 172.16.1.50
     media.haume.nz: 172.16.1.50
     music.haume.nz: 172.16.1.50
     next.haume.nz: 172.16.1.50
-    save.haume.nz: 172.16.1.50
+    static.haume.nz: 172.16.1.50
+    status.haume.nz: 172.16.1.50
 conditional:
 #  rewrite:
 #    # rewrite foo.spack.org as foo.haume.nz before dns resolution
 #    spack.org: haume.nz
-  mapping:
+#  mapping:
     # queries for *.groundtruth.co.nz are directed to a specific resolver
-    groundtruth.co.nz: 192.168.81.1
+#    groundtruth.co.nz: 192.168.81.1
 blocking:
   blackLists:
     ads:
+      # https://github.com/topics/pihole-blocklists
       - https://dblw.oisd.nl/
+      - https://raw.githubusercontent.com/hectorm/hmirror/master/data/adguard-simplified/list.txt
       - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
       - https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt
       - https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt
