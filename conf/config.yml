@@ -17,7 +17,7 @@ customDNS:
     git.haume.nz: 172.16.1.50
     media.haume.nz: 172.16.1.50
     music.haume.nz: 172.16.1.50
-    next.haume.nz: 172.16.1.50
+    files.haume.nz: 172.16.1.50
     static.haume.nz: 172.16.1.50
     status.haume.nz: 172.16.1.50
 conditional:
